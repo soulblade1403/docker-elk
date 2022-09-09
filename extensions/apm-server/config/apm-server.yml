@@ -1,5 +1,9 @@
 apm-server:
-  host: 0.0.0.0:8200
+  host: "0.0.0.0:8200"
+  # Agent authorization configuration. If no methods are defined, all requests will be allowed.
+  auth:
+    # Define a shared secret token for authorizing agents using the "Bearer" authorization method.
+    secret_token: ${APM_TOKEN}
 
 output:
   elasticsearch:
